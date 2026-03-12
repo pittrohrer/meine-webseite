@@ -1,0 +1,50 @@
+/* ........................... Reset Styles ........................... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ........................... Global Variables ........................... */
+:root {
+    /* Farben */
+    --color-primary: cadetblue; /* Hauptfarbe */
+    --color-secondary: gainsboro; /* Sekundärfarbe */
+    --color-tertiary: white; /* Tertiärfarbe */
+    --color-hover: burlywood; /* Einfärbung beim Hover */
+    --text-color: black; /* Standard Textfarbe */
+    --text-comment-color: gray; /* Textfarbe für Kommentare */
+    --background-color: gainsboro; /* Hintergrundfarbe */
+
+    /* Schatten */
+    --shadow: 0 4px 8px #0003; /* Standard Schatten */
+
+    /* Schriftarten und Textstile */
+    --font-family-base: arial, sans-serif; /* Standard-Schriftart */
+    --font-size-base: 16px; /* Basis-Schriftgröße */
+    --font-size-small: 0.8rem; /* Kleine Schriftgröße */
+    --font-size-large: 1rem; /* Grosse Schriftgröße */
+    --font-size-heading: 1.7rem; /* Überschriftsschriftgröße */
+
+    /* Abstände (Padding und Margin) */
+    --padding-base: 0.5rem 1rem; /* Standard-Padding */
+    --padding-small: 0.75rem; /* Kleines Padding */
+    --padding-large: 2rem 3rem; /* Grosses Padding */
+    --padding-bottom: 3rem; /* Padding für nach einem Abschnitt */
+    --margin-base: 1rem 3rem; /* Standard-Margin */
+    --margin-small: 1rem; /* Kleine Margin */
+    --margin-large: 3rem; /* Grosse Margin */
+
+    /* Border-Radius */
+    --border-radius-small: 4px; /* Kleiner Ecken-Radius */
+    --border-radius-medium: 8px; /* Grosser Ecken-Radius */
+    --border-radius-large: 50%; /* Grosser Ecken-Radius */
+
+    /* Layout-Größen */
+    --header-height: 100px; /* Höhe des Header */
+    --footer-height: 3rem; /* Höhe des Header */
+}

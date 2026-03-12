@@ -1,0 +1,39 @@
+/* ........................... Produkt ........................... */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--margin-small);
+    margin: var(--margin-base);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--background-color);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;  /* Stellt sicher, dass die Elemente untereinander angeordnet sind */
+    justify-content: space-between; /* Platz gleichmäßig zwischen den Elementen */
+    background-color: var(--color-tertiary);
+    padding: var(--padding-small);
+    border-radius: var(--border-radius-medium);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* Produkt-Bild */
+.product-image {
+    width: 80%; /* 20% kleiner als die Breite des Containers */
+    height: auto; /* Höhe wird automatisch im richtigen Verhältnis zum Bild-Format angepasst */
+    margin: 0 auto;
+    display: block; /* Sicherstellen, dass das Bild blockiert wird, um zentriert zu sein */
+    object-fit: contain; /* Bild im ursprünglichen Format beibehalten */
+}
+
+.like-container {
+    margin-bottom: var(--margin-small);  /* Fester Abstand zum unteren Rand des Produkts */
+    display: flex;
+    align-items: center;  /* Zentriert die Elemente innerhalb des Containers */
+    justify-content: center;  /* Zentriert den Inhalt horizontal */
+}

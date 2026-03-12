@@ -1,0 +1,78 @@
+/* ........................... Galerie ........................... */
+/* Galerie-Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible Spalten für verschiedene Bildschirmgrößen */
+    gap: var(--margin-small); /* Abstand zwischen den Bildern */
+    margin: var(--margin-base);
+    padding-bottom: var(--padding-bottom);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto; /* Behalte das Seitenverhältnis der Bilder bei */
+    border-radius: var(--border-radius-medium); /* abgerundete Ecken */
+    transition: transform 0.3s ease; /* Animation für Hover-Effekt */
+}
+
+/* Lightbox-Styles */
+.lightbox {
+    display: none; /* Lightbox bleibt ausgeblendet, bis ein Bild angeklickt wird */
+    position: fixed;
+    z-index: 1000;
+    left: 18%;
+    top: 5%;
+    width: 80%;
+    height: 80%;
+    justify-content: center; /* Horizontales Zentrieren mit Flexbox */
+    align-items: center; /* Vertikales Zentrieren mit Flexbox */
+    /* Flexbox für zentrierte Darstellung */
+}
+
+.lightbox-content {
+    max-width: 80%; /* Das Bild nimmt maximal 80% der Bildschirmbreite ein */
+    max-height: 80vh; /* Das Bild nimmt maximal 80% der Bildschirmhöhe ein */
+    object-fit: contain; /* Skaliert das Bild, um die Proportionen beizubehalten */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: var(--color-secondary);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ........................... Partner-Logo ........................... */
+.partner-logo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--margin-small);
+    padding: var(--padding-large);
+}
+
+.partner-logo a {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    height: 150px; /* Setze eine feste Höhe für die Logo-Container */
+}
+
+.partner-logo img {
+    height: auto; /* Proportional skalieren */
+    max-width: 200px; /* Setze eine maximale Breite */
+    transition: transform 0.3s ease; /* Animation für Hover-Effekt */
+}
+
+
+
+/* ........................... Galerie-Hover ........................... */
+.gallery img:hover {
+    transform: scale(1.05); /* Vergrößert das Bild bei Hover */
+}
+
+/* ........................... Partner-Logo-Hover ........................... */
+.partner-logo img:hover {
+    transform: scale(1.05); /* Vergrößert das Bild bei Hover */
+}

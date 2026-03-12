@@ -1,0 +1,68 @@
+/* ........................... Navigation ........................... */
+#nav-menu {
+    display: flex; /* Flexbox für Links */
+    list-style: none;
+    margin: 0 0 0 2rem;
+}
+
+#nav-menu a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--font-size-large);
+    padding: var(--padding-base);
+}
+
+/* Aktiver Navigationslink */
+#nav-menu a.active {
+    color: var(--color-hover); /* Setzt die Textfarbe des aktiven Links auf orange */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (width <= 768px) {
+    #nav-menu {
+        position: absolute;
+        top: var(--header-height);
+        right: 0;
+        height: auto;
+        max-height: 0; /* Verhindert sofortiges Einblenden */
+        width: 13rem;
+        overflow: hidden; /* Überlauf verstecken */
+        background-color: var(--color-primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Unsichtbar machen */
+        transition: opacity 0.3s ease, max-height 0.3s ease; /* Sanfter Übergang */
+    }
+
+    #nav-menu.active {
+        opacity: 1; /* Sichtbar machen */
+        max-height: 16rem; /* Maximale Höhe, um das Menü anzuzeigen */
+    }
+
+    #nav-menu li {
+        margin: 20px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 2rem;
+    }
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--color-secondary);
+        margin: 4px;
+    }
+}

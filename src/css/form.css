@@ -1,0 +1,106 @@
+/* ........................... Formular ........................... */
+/* Formular Elemente */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--padding-base);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: var(--margin-small);
+}
+
+label {
+    display: block;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--margin-small);
+    color: var(--text-color);
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--padding-small);
+    font-size: var(--font-size-large);
+    border: 1px solid var(--background-color);
+    border-radius: var(--border-radius-small);
+    margin-bottom: var(--margin-small);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Form Validation (Error Styles) */
+input:invalid,
+textarea:invalid {
+    border-color: var(--color-secondary);
+}
+
+input:valid,
+textarea:valid {
+    border-color: var(--color-primary);
+}
+
+/* Fehler-Icon */
+.error-icon {
+    color: red;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--padding-base);
+    border-radius: var(--border-radius-medium);
+    color: var(--color-tertiary);
+    font-size: var(--font-size-large);
+    text-align: center;
+    background-color: var(--color-primary); /* Standard Farbe für Erfolg */
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    opacity: 0.95;
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-in 3.5s forwards; /* Ein- und Ausblenden */
+}
+
+.notification.error {
+    background-color: var(--color-secondary); /* Farbe für Fehler */
+    color: var(--text-color); /* Textfarbe für Fehler */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 0.95;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}

@@ -1,0 +1,56 @@
+/* ........................... Typografie ........................... */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--margin-small);
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--color-primary);
+    margin: var(--margin-base);
+    font-size: var(--font-size-heading);
+}
+
+p {
+    margin: var(--margin-base);
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul, ol {
+    margin: var(--margin-base);
+    list-style-type: none; /* Keine Punkte für die äußeren Listen */
+}
+
+/* ........................... Main-Layout ........................... */
+main {
+    padding: var(--header-height) 0 var(--footer-height) 0;
+}
+
+/* Navigation für sehr kleine Geräte*/
+@media (width <= 500px) {
+    main {
+        padding: var(--header-height) 0 4rem 0; /* Abstand nach unten ist grösser, weil der Footer grösser werden kann */
+    }
+}
+
+/* ........................... Images ........................... */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

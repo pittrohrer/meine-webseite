@@ -1,0 +1,136 @@
+/* Style rules specific to each page */
+
+/* ........................... Home ........................... */
+#home {
+    background-image: url('../Bilder/DSC00380-2.jpg'); /* Pfad zu deinem Bild */
+    background-size: cover; /* Bild füllt die gesamte Breite und Höhe */
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat; /* Wiederholung des Bildes verhindern */
+    height: 100vh; /* Füllt die volle Höhe des sichtbaren Bereichs */
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    color: var(--color-secondary);
+}
+
+#home h2 {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 20%; /* Verschiebt den Text weiter nach oben (20% vom oberen Rand) */
+    left: 50px;
+}
+
+@media (width <= 768px) {
+    #home h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ........................... Über mich ........................... */
+.about-container {
+    display: flex; /* Flexbox für horizontale Ausrichtung */
+    justify-content: space-between; /* Platz zwischen Text und Bild */
+    align-items: flex-start; /* Elemente am oberen Rand ausrichten */
+    gap: var(--margin-small) /* Abstand zwischen Text und Bild */
+}
+
+.about-text {
+    flex: 1; /* Text nimmt den verfügbaren Platz ein */
+}
+
+.about-image img {
+    max-width: 300px; /* Feste Breite für das Bild */
+    height: auto; /* Seitenverhältnis beibehalten */
+    border-radius: var(--border-radius-medium);
+    margin-right: var(--margin-large);
+}
+
+@media (width <= 768px) {
+    .about-container {
+        flex-direction: column; /* Auf kleinen Bildschirmen wird das Bild unter den Text verschoben */
+    }
+
+    .about-image img {
+        max-width: 70%; /* Bild füllt die Breite auf kleinen Bildschirmen */
+        margin: 15%;
+    }
+}
+
+/* ........................... Erfolge ........................... */
+.achievements-container {
+    display: flex; /* Flexbox für horizontale Ausrichtung */
+    justify-content: flex-start; /* Elemente links ausrichten */
+    align-items: flex-start; /* Elemente am oberen Rand ausrichten */
+    gap: var(--margin-small); /* Abstand zwischen Text und Bild */
+}
+
+.achievements-text {
+    flex: 1; /* Text nimmt den verfügbaren Platz ein */
+}
+
+.achievements-image {
+    flex: 0 0 35%; /* Bild nimmt 30% der Breite ein */
+    margin-left: auto; /* Schiebt das Bild nach rechts */
+    margin-right:var(--margin-large);
+}
+
+.achievements-image img {
+    width: 100%; /* Bild nimmt 100% der Containerbreite ein */
+    height: auto; /* Seitenverhältnis beibehalten */
+    border-radius: var(--border-radius-medium);
+}
+
+@media (width <= 768px) {
+    .achievements-container {
+        flex-direction: column; /* Auf kleinen Bildschirmen wird das Bild unter den Text verschoben */
+    }
+
+    .achievements-image {
+        flex: 0 0 70%; /* Bild füllt 70% der Breite auf kleinen Bildschirmen */
+        margin: 15%;
+    }
+
+    .achievements-image img {
+        max-width: 100%; /* Bild passt sich der Breite des Containers an */
+    }
+}
+
+/* ........................... Medien ........................... */
+
+/* ........................... Sponsoring/Partner ........................... */
+#product-filters label {
+    margin: var(--margin-base); /* Gleichen Abstand wie für Titel */
+}
+
+/* ........................... Kontakt ........................... */
+
+/* Layout für die Diagramme */
+.charts-container {
+    display: flex;
+    justify-content: center; /* Zentriert die Diagramme horizontal */
+    gap: var(--margin-small); /* Abstand zwischen den Diagrammen */
+    margin-left: auto; /* Abstand vom linken Rand */
+    margin-right: auto; /* Abstand vom rechten Rand */
+    margin-bottom: var(--margin-large);
+    flex-wrap: wrap; /* Ermöglicht Zeilenumbruch, wenn der Platz nicht ausreicht */
+}
+
+.chart {
+    flex: 1; /* Beide Diagramme nehmen gleich viel Platz ein */
+    max-width: 400px; /* Begrenzung der Breite */
+}
+
+/* Media Query für mobile Geräte: Diagramme untereinander anzeigen */
+@media (width <= 768px) {
+    .charts-container {
+        flex-direction: column; /* Diagramme werden untereinander angezeigt */
+        align-items: center; /* Zentriert die Diagramme */
+        gap: var(--margin-small); /* Abstand zwischen den Diagrammen */
+    }
+
+    .chart {
+        max-width: 100%; /* Diagramme füllen die volle Breite aus */
+    }
+}

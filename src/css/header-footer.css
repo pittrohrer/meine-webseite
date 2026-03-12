@@ -1,0 +1,65 @@
+/* ........................... Header ........................... */
+header {
+    position: fixed;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    width: 100%;
+    top: 0;
+    height: var(--header-height);
+    z-index: 1000;
+    display: flex; /* Flexbox aktivieren */
+    align-items: center; /* Vertikale Ausrichtung */
+    justify-content: space-between; /* Abstand zwischen Titel und Links */
+}
+
+header h1 {
+    font-size: var(--font-size-heading);
+    margin: 0 0 0 var(--margin-large);
+}
+
+/* Die Reihenfolge des Codes macht meiner Meinung nach keinen Sinn, aber sonst reklamiert der CSS-Checker der Pipeline */
+/* Footer Links */
+footer a {
+    text-decoration: none;
+}
+
+#header-links {
+    display: flex; /* Flexbox für die Links */
+    align-items: center; /* Vertikale Ausrichtung der Links */
+}
+
+/* ........................... Footer ........................... */
+footer {
+    display: flex;
+    justify-content: space-between; /* Aufteilung links und rechts */
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0 var(--margin-small); /* Padding für den Abstand zum Inhalt */
+    font-size: var(--font-size-small);
+}
+
+/* Address: Kontaktinformationen nebeneinander anordnen */
+address {
+    display: flex;
+    gap: var(--margin-small); /* Abstand zwischen den Absätzen */
+    font-style: normal; /* Entfernt den Standard-kursiv-Stil von address */
+}
+
+/* Section für Copyright */
+section.copyright {
+    text-align: right;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ........................... Header-Hover ........................... */
+#nav-menu a:hover {
+    background-color: var(--color-hover);
+    border-radius: var(--border-radius-small);
+}
